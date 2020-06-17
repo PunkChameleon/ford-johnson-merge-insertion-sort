@@ -85,6 +85,16 @@ Since the number of comparisons needed in a binary search of three items is log2
 
 To test this across scale, a ‘create_array’ function is included that takes a desired ‘length’ and outputs an array of random, non-repeated integers to be sorted. Once generated, we start a timer, run the sort (which prints the comparison count by default) and when complete, do a simple time duration calculation to determine the time it took for the sort to complete.
 
+### Performance Test Metrics
+| Number of Items  | Number of Approximate Comparisons Made   |  Duration of Sort Execution (Seconds)  | 
+|---|---|---|
+| 10  |  8 | 0.00007629394  | 
+|  20 | 18  | 0.0001442432403564453  |
+|  100 | 90  | 0.0004258155822753906  | 
+|  1000 |  844 |  0.01973128318786621 | 
+|  2500 |  1958 | 0.09786701202392578  | 
+|  5000 | N/A  | N/A  | 
+
 ### Analysis of Test Results
 
 The implementation of the FJMI algorithm performed well when these tests were applied, especially with lower numbered sets, as shown in the results above. While the approximate comparisons were not as close to the minimums referenced by Knuth, they are within range. For example, when N is 12 this implementation approximates 10 comparisons while the minimum should be 9. The speed of performance was surprisingly fast as well; though likely not as fast as other sorts, it did not perform with significant lag as one would expect.
