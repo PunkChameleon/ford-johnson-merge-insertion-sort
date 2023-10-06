@@ -190,7 +190,7 @@ def merge_insertion_sort (A):
     hasStraggler = len(A) % 2 != 0
 
     if hasStraggler:
-        straggler = a.pop(len(A) -1)
+        straggler = A.pop(len(A) -1)
     else:
         straggler = False
 
