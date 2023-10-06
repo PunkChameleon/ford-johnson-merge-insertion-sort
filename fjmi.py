@@ -147,6 +147,9 @@ def create_s(sorted_split_array, straggler, print_comparision_estimation):
           item = pend[iterator - 1]
           indexSequence.append(iterator)
           last = "not-jacob"
+          # Increment our iterators
+          iterator += 1
+          jacobindex += 1
 
       # we now have the most optimal item to insert (with the least comparisons!).
       # lets use bisect to get the insertion point
@@ -154,9 +157,6 @@ def create_s(sorted_split_array, straggler, print_comparision_estimation):
 
       # then insert it into S!
       S.insert(insertion_point, item)
-      # Increment our iterators
-      iterator += 1
-      jacobindex += 1
 
       # Update comparisions counter
       comparisions_made += 2
