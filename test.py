@@ -19,7 +19,9 @@ def createArray(length):
 # Create an unsorted array
 a = createArray(100)
 
+print("Length before sort is", len(a))
 # And sort it!
 start_time = time.time()
 fjmi.merge_insertion_sort(a)
 print("Sort took", time.time() - start_time, "to run")
+print("Length after sort is", len(a))
